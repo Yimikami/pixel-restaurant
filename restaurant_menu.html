@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pixel Restaurant</title>
+    <style>
+      * {
+        font-family: "Press Start 2P", cursive;
+        cursor: url("cursor.png"), auto;
+      }
+      body {
+        background-color: #f4f4f4;
+        color: #333;
+      }
+
+      header {
+        text-align: center;
+        background-color: #333333;
+        color: #fff;
+        padding: 15px;
+      }
+
+      #header-img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+        object-position: 0 0;
+      }
+
+      #nav-bar a {
+        text-decoration: none;
+        color: #61dafb;
+      }
+
+      #menu {
+        text-align: center;
+        padding: 20px;
+      }
+
+      #menu article {
+        display: inline-block;
+        width: 30%;
+        margin: 20px;
+      }
+
+      #menu img {
+        height: 250px;
+        border: 2px solid #333;
+      }
+
+      #menu p {
+        font-size: 14px;
+        padding: 0 10px;
+      }
+
+      #order-form {
+        padding: 20px;
+        text-align: center;
+      }
+
+      #order-form form {
+        display: inline-block;
+      }
+
+      #order-form label {
+        font-size: 14px;
+      }
+
+      #order-form input[type="number"] {
+        width: 50px;
+        margin-bottom: 10px;
+        padding: 5px;
+        cursor: url("cursor_point.png"), auto;
+      }
+
+      #order-form input[type="checkbox"] {
+        margin-bottom: 10px;
+        cursor: url("cursor_point.png"), auto;
+      }
+
+      #order-form textarea {
+        width: 100%;
+        margin-bottom: 10px;
+        padding: 10px;
+      }
+
+      #order-form input[type="submit"] {
+        background-color: #61dafb;
+        border: none;
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: url("cursor_point.png"), auto;
+      }
+
+      footer {
+        text-align: center;
+        padding: 10px;
+        color: rgb(41, 41, 41);
+        font-size: 12px;
+      }
+
+      footer a {
+        color: #000000;
+        text-decoration: none;
+      }
+
+      footer a:hover {
+        color: #61dafb;
+        cursor: url("cursor_point.png"), auto;
+      }
+    </style>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <img id="header-img" src="header.jpg" alt="Pixel Restaurant Header" />
+      <h1 id="header-text">Pixel Restaurant</h1>
+      <nav id="nav-bar">
+        <a href="#menu">Menu</a>
+        <a href="#order-form">Order</a>
+      </nav>
+    </header>
+    <section id="menu">
+      <h2>Menu</h2>
+      <article>
+        <img src="pizza.png" alt="Pixel Pizza" />
+        <h3>Pixel Pizza</h3>
+        <p>
+          Our signature pizza, topped with pixelated pepperoni, mushrooms, and
+          olives. <br />
+          <br /><i>12$</i>
+        </p>
+      </article>
+      <article>
+        <img src="hotdog.png" alt="Pixel Hotdog" />
+        <h3>Pixel Hotdog</h3>
+        <p>
+          A pixel hotdog, served with ketchup, mustard, and a side of fries.
+          <br />
+          <br />
+          <i>10$</i>
+        </p>
+      </article>
+      <article>
+        <img src="sushi.png" alt="Pixel Japanese Plate" />
+        <h3>Pixel Japanese Plate</h3>
+        <p>
+          A pixelated japanese plate, served with sushi, sashimi, and miso soup.
+          <br />
+          <br />
+          <i>15$</i>
+        </p>
+      </article>
+    </section>
+    <section id="order-form">
+      <h2>Place Your Order</h2>
+      <form>
+        <label for="pizza-quantity">Pixel Pizza Quantity:</label>
+        <input
+          type="number"
+          id="pizza-quantity"
+          name="pizza-quantity"
+          min="0"
+          required
+        />
+        <br />
+        <label for="hotdog-quantity">Pixel Hotdog Quantity:</label>
+        <input
+          type="number"
+          id="hotdog-quantity"
+          name="hotdog-quantity"
+          min="0"
+          required
+        />
+        <br />
+        <label for="japanese-plate-quantity"
+          >Pixel Japanese Plate Quantity:</label
+        >
+        <input
+          type="number"
+          id="japanese-plate-quantity"
+          name="japanese-plate-quantity"
+          min="0"
+          required
+        />
+        <h4>Extras</h4>
+        <label for="extra-sides-1">Pixel Fries:</label>
+        <input type="checkbox" name="sides" />
+        <br />
+        <label for="extra-sides-2">Pixel Nuggets:</label>
+        <input type="checkbox" name="sides" />
+        <br />
+        <label for="extra-sides-3">Pixel Salad:</label>
+        <input type="checkbox" name="sides" />
+        <br />
+        <label for="extra-sides-5">Pixel Garlic Bread:</label>
+        <input type="checkbox" name="sides" />
+        <br />
+        <label for="extra-sides-6">Pixel Mozzarella Sticks:</label>
+        <input type="checkbox" name="sides" />
+        <br />
+        <label for="extra-sides-7">Pixel Onion Rings:</label>
+        <input type="checkbox" name="sides" />
+        <br />
+        <br /><br />
+        <label for="order-details">Your Special Requests:</label><br />
+        <br />
+        <textarea
+          id="order-details"
+          name="order-details"
+          rows="4"
+          required
+        ></textarea
+        ><br /><br />
+        <input type="submit" value="Go To Checkout" />
+      </form>
+    </section>
+    <footer>
+      <p>
+        Made with ❤️ by <a href="https://www.codedex.io/@yimikami">Yimikami</a>
+      </p>
+    </footer>
+  </body>
+</html>
